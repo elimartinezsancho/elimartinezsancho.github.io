@@ -462,3 +462,51 @@ footer {
   object-fit: cover;
   object-position: center;
 }
+
+.project-heading {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.project-logo {
+  width: 125px;
+  height: 105px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.project-content > p {
+  margin-top: 0;
+}
+
+.funding-banner {
+  max-width: 760px;
+  margin-top: 24px;
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid #d8dde3;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.funding-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 560px) {
+  .project-heading {
+    align-items: flex-start;
+  }
+
+  .project-logo {
+    width: 95px;
+    height: 80px;
+  }
+
+  .funding-banner {
+    padding: 8px;
+  }
+}
