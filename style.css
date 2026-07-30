@@ -463,27 +463,35 @@ footer {
   object-position: center;
 }
 /* Project logos */
-.project-heading {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
+/* Project logos */
+
+.project .project-heading {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
+  gap: 14px;
+}
+
+.project .project-heading > div {
+  order: 1;
+}
+
+.project .project-heading .project-logo {
+  order: 2;
+  display: block;
+  width: 125px;
+  max-width: 125px;
+  height: auto;
+  margin: 0;
+  object-fit: contain;
 }
 
 .project-heading .project-type {
-  margin-bottom: 8px;
+  margin: 0 0 8px;
 }
 
 .project-heading h3 {
-  margin-bottom: 0;
-}
-
-.project-heading img.project-logo {
-  display: block;
-  width: 125px !important;
-  max-width: 125px !important;
-  height: auto !important;
-  object-fit: contain;
+  margin: 0;
 }
 
 .project-content {
@@ -494,32 +502,39 @@ footer {
   margin-top: 0;
 }
 
-.funding-banner {
+.project .funding-banner {
   width: 100%;
   max-width: 360px;
   margin-top: 18px;
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  background: transparent;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
   overflow: visible;
 }
 
-.funding-banner img {
+.project .funding-banner img {
   display: block;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
+
 @media (max-width: 560px) {
-  .project-heading img.project-logo {
-    width: 75px !important;
-    max-width: 75px !important;
-    height: 65px !important;
-    flex-basis: 75px;
+  .project .project-heading .project-logo {
+    width: 100px;
+    max-width: 100px;
   }
 
-  .funding-banner {
+  .project .funding-banner {
     max-width: 300px;
   }
 }
