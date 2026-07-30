@@ -463,20 +463,27 @@ footer {
   object-position: center;
 }
 /* Project logos */
-
 .project-heading {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.project-heading .project-type {
+  margin-bottom: 8px;
+}
+
+.project-heading h3 {
+  margin-bottom: 0;
 }
 
 .project-heading img.project-logo {
   display: block;
-  width: 90px !important;
-  max-width: 90px !important;
-  height: 75px !important;
+  width: 125px !important;
+  max-width: 125px !important;
+  height: auto !important;
   object-fit: contain;
-  flex: 0 0 90px;
 }
 
 .project-content {
@@ -491,11 +498,11 @@ footer {
   width: 100%;
   max-width: 360px;
   margin-top: 18px;
-  padding: 8px;
-  overflow: hidden;
-  border: 1px solid #d8dde3;
-  border-radius: 10px;
-  background: #ffffff;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
 }
 
 .funding-banner img {
@@ -504,7 +511,6 @@ footer {
   max-width: 100% !important;
   height: auto !important;
 }
-
 @media (max-width: 560px) {
   .project-heading img.project-logo {
     width: 75px !important;
