@@ -501,12 +501,60 @@ footer {
     align-items: flex-start;
   }
 
-  .project-logo {
-    width: 95px;
-    height: 80px;
-  }
+ 
 
   .funding-banner {
     padding: 8px;
+  }
+}
+/* Project branding — corrected sizes */
+
+.project-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.project .project-logo {
+  width: 110px !important;
+  max-width: 110px !important;
+  height: 90px !important;
+  object-fit: contain;
+  flex: 0 0 110px;
+}
+
+.project-content {
+  min-width: 0;
+}
+
+.funding-banner {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 22px;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid #d8dde3;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.funding-banner img {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .project .project-logo {
+    width: 85px !important;
+    max-width: 85px !important;
+    height: 70px !important;
+    flex-basis: 85px;
+  }
+
+  .funding-banner {
+    max-width: 100%;
   }
 }
